@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the Java source code (WelcomeMessage.java) into the container's working directory
-COPY WelcomeMessage.java /app/
+COPY WelcomeMessage.java /app
 
 # Compile the Java program
 RUN javac WelcomeMessage.java
