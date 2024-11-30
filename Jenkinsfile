@@ -2,7 +2,7 @@ pipeline {
     agent any  // This means the pipeline can run on any available agent
 
     environment {
-        DOCKER_IMAGE = 'java-welcome-message'  // Name of the Docker image
+        DOCKER_IMAGE = 'java-welcome-message:latest'  // Name of the Docker image
     }
 
     stages {
@@ -21,14 +21,6 @@ pipeline {
             }
         }
 
-        stage('Run Docker Container') {
-            steps {
-                script {
-                    // Run the Docker container and execute the WelcomeMessage Java program
-                    sh 'docker run $DOCKER_IMAGE'
-                }
-            }
-        }
     }
 
     post {
