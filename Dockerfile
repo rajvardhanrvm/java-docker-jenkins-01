@@ -1,7 +1,7 @@
-# Use a base image with JDK installed (OpenJDK 11 in this case)
-FROM openjdk:11-jre-slim
+# Use OpenJDK 11 JDK image
+FROM openjdk:11-jdk-slim
 
-# Set the working directory inside the container
+# Set the working directory in the container
 WORKDIR /app
 
 # Copy the Java source code (WelcomeMessage.java) into the container's working directory
@@ -12,3 +12,4 @@ RUN javac WelcomeMessage.java
 
 # Run the Java program
 CMD ["java", "WelcomeMessage"]
+
